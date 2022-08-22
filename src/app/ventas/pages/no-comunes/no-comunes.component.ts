@@ -63,7 +63,7 @@ export class NoComunesComponent {
 
 
   // Async Pipe
-  miObservavle = interval(1000); 
+  miObservavle = interval(5000); 
 
   // constructor(){
   //   this.miObservavle.subscribe( console.log ) 
