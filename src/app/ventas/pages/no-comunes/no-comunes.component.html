@@ -76,7 +76,9 @@
 
     <div class="col md:col-6">
         <p-fieldset legend="Async pipe" [toggleable]="true">
-            <!-- <pre>{{ miObservavle | async }}</pre> -->
+            <pre *ngIf="!(valorPromesa | async)">Recolviendo miObservavle</pre>
+            <pre>{{ miObservavle | async }}</pre>
+
             <pre *ngIf="!(valorPromesa | async)">Recolviendo promesa</pre>
             <pre>{{ valorPromesa | async }}</pre>
         </p-fieldset>

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { interval, timeout } from 'rxjs';
+import { interval, tap, timeout } from 'rxjs';
 
 @Component({
   selector: 'app-no-comunes',
@@ -63,7 +63,7 @@ export class NoComunesComponent {
 
 
   // Async Pipe
-  miObservavle = interval(5000); 
+  miObservavle = interval(200).pipe( tap(() => console.log ('interval') )) ; 
 
   // constructor(){
   //   this.miObservavle.subscribe( console.log ) 
